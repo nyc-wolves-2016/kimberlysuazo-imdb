@@ -8,20 +8,14 @@ class Search extends React.Component {
     event.preventDefault();
     var textArea = this.refs.titleSearch.value;
     var textArea2 = this.refs.yearSearch.value;
+    var params = {t : textArea, y: textArea2 }
     var baseUrl = "http://www.omdbapi.com/?t=";
-    if (textArea2 === "") {
-      var year  = "";
-    } else {
-      var year = "&y=" + textArea2;
-    }
 
-debugger;
     $.ajax({
-      url: baseUrl + textArea + year,
-      method: "get"
+      url: baseUrl,
+      data: jQuery.param(params)
     }).done(function(response){
-
-      textArea = "";
+      textArea.value = "";
       textArea2 = "";
       this.props.onSearchTitle(response);
     }.bind(this));
