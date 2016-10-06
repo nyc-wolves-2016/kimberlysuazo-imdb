@@ -1,6 +1,6 @@
 class Info extends React.Component {
   render() {
-    // let { Title, Year, Plot, Director } = this.props.data;
+    // let { Title, Year, Plot, Director, imdbRating, Actors } = this.props.data;
     let titles =
       {
         Title: "Eternal Sunshine of the Spotless Mind",

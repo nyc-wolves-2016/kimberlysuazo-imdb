@@ -10,15 +10,13 @@ class App extends React.Component {
     return(
       <div>
         <header id="top-nav">
-          <div id="brand">Baby IMDB API</div>
-          <form id="search-form">
-            <input id="search" type="text" name="query" />
-          </form>
+          <Search />
         </header>
+
         <section className="container">
           {/* <ComposeTweet onCreateTweet={this.handleCreateTweet} /> */}
           {/* tweets={this.state.titles.poster} */}
-          <Poster  />
+          <Poster />
           <Info />
         </section>
         <section id="titles-list">

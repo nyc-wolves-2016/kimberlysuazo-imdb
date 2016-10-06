@@ -1,5 +1,6 @@
 class Poster extends React.Component {
   render() {
+    // let { Poster } = this.props.data;
     let titles =
       {
         Title: "Eternal Sunshine of the Spotless Mind",
