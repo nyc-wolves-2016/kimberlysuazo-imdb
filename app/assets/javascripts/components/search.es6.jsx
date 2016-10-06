@@ -13,10 +13,11 @@ class Search extends React.Component {
 
     $.ajax({
       url: baseUrl,
-      data: jQuery.param(params)
+      data: $.param(params)
     }).done(function(response){
-      textArea.value = "";
-      textArea2 = "";
+      debugger;
+      this.refs.titleSearch.value = "";
+      this.refs.yearSearch.value = "";
       this.props.onSearchTitle(response);
     }.bind(this));
   }
