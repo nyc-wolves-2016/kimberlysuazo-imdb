@@ -63,11 +63,25 @@ p {
 }
 
 #search {
-  position: absolute;
-  height: 24px;
-  bottom: 5px;
-  right: 10px;
-  width: 200px;
+  position: relative;
+  // height: 24px;
+  bottom: 10px;
+  // right: -100px;
+  // // width: 200px;
+  border-radius: 24px;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 36px;
+  font-size: 14px;
+  outline: none;
+}
+
+#search button{
+  position: relative;
+  // height: 24px;
+  // bottom: 10px;
+  // right: -100px;
+  // // width: 200px;
   border-radius: 24px;
   padding: 4px;
   padding-left: 10px;

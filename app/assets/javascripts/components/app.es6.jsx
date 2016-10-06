@@ -4,22 +4,36 @@ class App extends React.Component {
     this.state = {
       titles: []
     };
-
+     this.handleSearchTitle = this.handleSearchTitle.bind(this);
   }
+
+  componentDidMount() {
+    $.ajax({
+      url: "http://www.omdbapi.com/?t=eternal%20sunshine%20of%20the%20spotless%20mind"
+    })
+    .done((response) => {
+      this.setState({titles: response});
+    })
+  }
+
+  handleSearchTitle(title){
+    this.setState({
+      titles: title
+    })
+  }
+
   render(){
     return(
       <div>
         <header id="top-nav">
-          <Search />
+          <Search onSearchTitle= {this.handleSearchTitle}/>
         </header>
 
         <section className="container">
-          {/* <ComposeTweet onCreateTweet={this.handleCreateTweet} /> */}
-          {/* tweets={this.state.titles.poster} */}
-          <Poster />
-          <Info />
+          <Poster titles={this.state.titles}/>
+          <Info titles={this.state.titles}/>
         </section>
-        <section id="titles-list">
+        {/* <section id="titles-list">
           <h3>Popular</h3>
           <ul>
             <li>filler</li>
@@ -33,7 +47,7 @@ class App extends React.Component {
             <li>filler</li>
             <li>filler</li>
           </ul>
-        </section>
+        </section> */}
       </div>
     );
   }
