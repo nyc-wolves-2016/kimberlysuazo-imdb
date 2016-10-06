@@ -29,7 +29,7 @@ class Search extends React.Component {
       <form id="search-form" onSubmit={this.handleSubmit}>
         <input ref= "titleSearch" id="search" type="text" name="query" placeholder="Search for a Title here:" />
         <input ref= "yearSearch" id="search" type="text" name="query" placeholder="Year (optional)" />
-        <input id="search button" type="submit" value="Go" />
+        <input id="button" type="submit" value="Go" />
       </form>
       </div>
     );

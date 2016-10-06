@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
 input[type=submit] {
@@ -78,16 +79,16 @@ p {
 
 #button{
   position: relative;
-  // height: 24px;
-  // bottom: 10px;
-  // right: -100px;
-  // // width: 200px;
+  height: 30px;
+  bottom: 8px;
+  right: 30px;
+  width: 30px;
   border-radius: 24px;
-  padding: 4px;
-  padding-left: 10px;
+  background-color: #f2f2f2;
   padding-right: 36px;
   font-size: 14px;
   outline: none;
+  font-weight: bold;
 }
 
 .fa-search {
@@ -100,7 +101,9 @@ p {
   position: relative;
   margin: 70px auto;
   width: 768px;
-  margin-top: 200px;
+  padding: 100px 20px 20px 20px;
+  background-color: white;
+  min-height: 900px;
 }
 
 #tweet-box {
@@ -112,30 +115,6 @@ p {
   background: #00A5D5;
   padding: 6px;
   border-radius: 6px
-}
-
-#trends-container {
-  position: absolute;
-  top: 180px;
-  height: 258px;
-  width: 210px;
-  max-width: 210px;
-  border: 1px solid #000;
-  padding: 15px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-#tweets-container {
-  position: absolute;
-  left: 260px;
-  width: 500px;
-  border-radius: 6px;
-  border: 1px solid #000;
-}
-
-#tweets-container h3 {
-  padding-left: 10px;
 }
 
 .tweet {
@@ -151,12 +130,7 @@ p {
   max-width: 410px;
 }
 
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 5px;
-  margin-right: 4px;
-}
+
 
 .full-name {
   font-weight: bold;
@@ -170,4 +144,8 @@ p {
 
 .title{
   text-align: right;
+}
+
+.movie-info p {
+  line-height: 1.25em;
 }
