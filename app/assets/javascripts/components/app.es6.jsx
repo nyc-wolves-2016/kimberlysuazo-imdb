@@ -32,6 +32,7 @@ class App extends React.Component {
 
         <section className="container">
           <Results />
+          <hr/>
           <Poster titles={this.state.titles}/>
           <Info titles={this.state.titles}/>
         </section>

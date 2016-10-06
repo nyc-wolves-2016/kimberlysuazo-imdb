@@ -1,4 +1,10 @@
 class Listing extends React.Component {
+  constructor(){
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  
   render() {
     if (this.props.titles.Poster === "N/A") {
       var poster  = "http://www.e-squareindia.com/images/poster-not-available.png"
