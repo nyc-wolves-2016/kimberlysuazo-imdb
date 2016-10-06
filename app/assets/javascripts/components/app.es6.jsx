@@ -2,7 +2,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      titles: []
+      titles: [],
+      results: []
     };
      this.handleSearchTitle = this.handleSearchTitle.bind(this);
   }
@@ -30,24 +31,10 @@ class App extends React.Component {
         </header>
 
         <section className="container">
+          <Results />
           <Poster titles={this.state.titles}/>
           <Info titles={this.state.titles}/>
         </section>
-        {/* <section id="titles-list">
-          <h3>Popular</h3>
-          <ul>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-            <li>filler</li>
-          </ul>
-        </section> */}
       </div>
     );
   }
